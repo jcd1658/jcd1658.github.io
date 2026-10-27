@@ -1,29 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <style>
-    body { font-family: system-ui, sans-serif; line-height: 1.6; max-width: 700px; margin: 40px auto; padding: 0 20px; color: #222; }
-    h1 { margin-bottom: 0.2em; }
-    a { color: #0969da; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .project { margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Engineering Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, I'm Jane Doe</h1>
-  <p>Welcome to my portfolio. I build web applications and digital tools.</p>
 
-  <h2>Featured Projects</h2>
-  <div class="project">
-    <h3>Project One</h3>
-    <p>A brief summary of what this project does and the stack used.</p>
-    <a href="https://github.com" target="_blank">View Code &rarr;</a>
+<nav>
+  <div class="wrap">
+    <span class="brand">Julian Diaz's Portfolio</span>
+    <span class="links"><a href="#project">Vertical Hydroponics System</a><a href="#ftc">FTC</a><a href="#teaching">Teaching</a></span>
   </div>
+</nav>
 
-  <h2>Contact</h2>
-  <p>Find me on <a href="https://github.com">GitHub</a> or email me at jane@example.com.</p>
+<header class="hero">
+  <div class="wrap">
+    <h1 class="gt">JULIAN DIAZ</h1>
+    <p class="lede">Robotics & Mechanical Design | Athlete | Educator</p>
+  </div>
+</header>
+
+<section id="project">
+  <div class="wrap">
+    <h2>Vertical Hydroponics System</h2>
+    <p class="sub">A rotating, self-watering plant tower for condos too small for a garden, taken from a pencil sketch to a full Fusion 360 assembly.</p>
+
+    <div class="versions">
+      <div class="version">
+        <div class="v gt">V1</div>
+        <div><h3>Sketch</h3><p>My first design <strong>drove the water pump with a shaft going through the reservoir wall</strong> and <strong>rested the main rotating gear directly on the base</strong>. On paper I found two problems: <span class="problem">one failed seal in the reservoir wall would let water into the electronics</span>, and the <span class="problem">plastic-on-plastic contact between the base and gear would require high torque and make the spin stutter.</span></p></div>
+        <div class="vimg-wrap"><img class="vimg" src="v1.png" alt="Hand-drawn sketch"></div>
+      </div>
+      <div class="version">
+        <div class="v gt">V2</div>
+        <div><h3>Cardboard Model</h3><p>I built a <strong>1:2 scale cardboard model</strong> to test sizing and placement. It showed that <span class="problem">the tower was too short</span> and <span class="problem">top-heavy, since the pole carries the plants, tiers, and cover while spinning</span>. With my mentor’s feedback, I <strong>replaced the pump shaft with a magnetic coupler</strong>, <strong>added a ball-bearing track under the gear</strong>, and <strong>swapped the suspension cables for rigid vertical rods connected from the bottom of the spinning structure, instead of the top</strong>.</p></div>
+        <div class="vimg-wrap"><img class="vimg" src="v2.png" alt="Cardboard model"></div>
+      </div>
+      <div class="version">
+        <div class="v gt">V3</div>
+        <div><h3>CAD Model</h3><p>The full Fusion 360 assembly puts those fixes in place. <strong>A magnet coupler spins the pump turbine through a solid wall</strong>, so nothing penetrates the reservoir. <strong>A 75-tooth gear on a bearing race</strong> rotates the chassis, and <strong>eight vertical rods hold stackable tiers of seven cups each</strong>. It isn’t built yet. Key components are sourced, and physical assembly is next.</p></div>
+        <div class="vimg-wrap"><img class="vimg" src="v3.png" alt="CAD model"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ftc">
+  <div class="wrap">
+    <h2>FTC Robotics, <span class="gt">2021–2025</span></h2>
+    <p class="sub">Four seasons across Alberta, British Columbia, and Europe.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Season</th><th>Highlights</th></tr></thead>
+        <tbody>
+          <tr><td>2021–22</td><td><strong>Alberta Championship:</strong> Inspire 2nd, Design 3rd, Motivate 3rd, Think 3rd, Control, <br>Top Ranked 5th</td></tr>
+          <tr><td>2022–23</td><td><strong>BC Championship:</strong> Innovate 1st. <br><strong>Lower Mainland Qualifier:</strong> Control 1st, Motivate 3rd</td></tr>
+          <tr><td>2023–24</td><td><strong>Lower Mainland Qualifier:</strong> Inspire 1st, Winning Alliance Captain. <br><strong>BC Championship:</strong> Innovate 1st, Inspire 3rd</td></tr>
+          <tr><td>2024–25</td><td><strong>BC Championship:</strong> Inspire 2nd. Invited to the inaugural European invite-only Premier Event <br><strong>European Premier Event:</strong> Innovate 2nd</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="role">I programmed the arm’s PID control and an OpenCV auto-alignment routine, which <strong>from 13 seconds to 7</strong>. I also <strong>authored our engineering portfolio every season</strong>, and in 2024-25 it documented our capstan drive and custom box-tube slide. That documentation helped us earn <strong>2nd Place Inspire at the BC Championship</strong> and an invitation to the inaugural <strong>European Premier Event</strong>, where we went on to win <strong>2nd Place Innovate</strong>.</p>
+    
+    <h2>2024-25 Engineering Portfolio</h2>
+    <div class="pdf-viewer">
+      <iframe 
+        src="parabellum-ep.pdf" 
+        width="100%" 
+        height="600px" 
+        title="2024–25 FTC Engineering Portfolio"
+        style="border: 1px solid #ccc; border-radius: 8px;">
+        <p>Your browser does not support embedded PDFs. <a href="parabellum-ep.pdf" target="_blank" rel="noopener">Download or view the portfolio here</a>.</p>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<section id="teaching">
+  <div class="wrap">
+    <h2>Teaching <span class="gt">STEM</span></h2>
+
+    <!--<div class="specs">
+      <div class="spec"><b class="gt">3</b><span>Design Iterations</span></div>
+      <div class="spec"><b class="gt">0</b><span>Design iterations</span></div>
+      <div class="spec"><b class="gt">$0</b><span>Total cost</span></div>
+      <div class="spec"><b class="gt">0 mo</b><span>Time invested</span></div>
+    </div>-->
+
+    <div class="cols">
+      <div class="card">
+        <h3>FLL Coach</h3>
+        <p>Founded and mentored a <strong>beginner two-student robotics team</strong> through robot design, programming, and an accessibility research project. Led the team to an <strong>Engineering Excellence award</strong> and qualification for the BC/Yukon Championship, where I received the <strong>Coach Award</strong>.</p>
+      </div>
+      <div class="card">
+        <h3>Zebra Robotics</h3>
+        <p>Taught Scratch, Python, Java, and mechanical design to <strong>100+ students aged 5–18.</strong> Designed and led a <strong>specialized robotics workshop for 9 neurodiverse teens with the Canucks Autism Network</strong>, adapting technical concepts to individual learning needs.</p>
+      </div>
+      <div class="card">
+        <h3>SFU Camps Lead Volunteer</h3>
+        <p>Supervised <strong>youth STEM camps</strong>, leading hands-on technical lessons and recreational activities. <strong>Mentored other volunteers</strong> on classroom management, curriculum delivery, and instruction techniques, ensuring an engaging learning enviornment for campers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">jcd8856@email.com</div>
+</footer>
+
 </body>
 </html>
